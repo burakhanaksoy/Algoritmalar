@@ -16,9 +16,9 @@ def binary_search(aranan_no, dizi):
     if dizi[konum] == aranan_no:
       return True
     elif dizi[konum] > aranan_no:
-      yuksek_nokta = konum
+      yuksek_nokta = konum - 1
     else:
-      dusuk_nokta = konum
+      dusuk_nokta = konum + 1
     
     konum = (yuksek_nokta + dusuk_nokta) / 2
    
@@ -32,5 +32,12 @@ Binary search O(log2(N))'de calisir. Bu da demek oluyor ki, linear search'un wor
 <b>Ortalamadan O(n/2) ise cok cok daha iyidir</b>
 
 <p align="center">
-
+<img width="450" src="https://user-images.githubusercontent.com/31994778/123933051-ad436c00-d99a-11eb-811f-f0e194f642ad.png">
 </p>
+
+<p align="center">
+Binary ve Linear search karsilastirmasi
+</p>
+
+---
+
