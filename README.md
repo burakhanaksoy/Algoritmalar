@@ -430,3 +430,26 @@ Worst Case: O(n^2)
 Best Case: O(N * log N)
 
 <b>Quick sort, merge ve heap sort'dan genelde daha hizlidir. Ek olarak, Quick sort bir in-place sorting algoritmasi, yani extra array olusturmayan, bir algoritma oldugu icin, space karmasikligi merge sort'dan daha avantajlidir.</b>
+
+---
+
+<h2>Tim Sort</h2>
+
+<p align="center">
+  <img width="350" src="https://user-images.githubusercontent.com/31994778/124352584-c2720200-dc09-11eb-8a2a-0bd0d901b521.gif">
+  </p>
+  
+<b><i>"Timsort Piton programlama dilinin 2.3 surumunden bu yana resmi siralama algoritmasidir."</b></i> Tim Sort'u ozel yapan sey, insertion sort'u ve merge sort'u birlikte kullanmasidir.
+
+- Siralanmak istenen dizi icerisinde, sirali olan alt-diziler bulunur. Bunlara "run" denir.
+- "Run"lar kendi icinde insertion sort kullanilarak siralanir.
+- Kendi icinde siralanan "Run"lar merge sort'da kullandigimiz birlestirme fonksiyonu ile birlestirilir.
+- <b>Eger sirasiz dizinin uzunlugu "Run"dan daha kucuk ise, dizi sadece insertion sort kullanilarak siralanir.</b>
+- Boyle yapilmasinin amaci insertion sort'un kucuk uzunluktaki dizilerde iyi performans gostermesidir.
+- <b>"Run"in uzunlugu 32-64 eleman arasindadir.</b>
+
+<h3>Karmasiklik</h3>
+
+- Worst Case: O(N log N)
+- Best Case: O(N)
+- Average: O(N log N)
